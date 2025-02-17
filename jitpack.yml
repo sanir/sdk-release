@@ -1,9 +1,10 @@
 jdk:
   - openjdk17
+
+install:
+  - ./gradlew copyAAR
+
 build:
-  before_install:
-    - mkdir -p build/outputs/aar
-    - cp releases/sdk-release.aar build/outputs/aar/MySDK.aar
   artifacts:
-    - path: build/outputs/aar/MySDK.aar
+    - path: build/outputs/aar/sdk-release.aar
       name: MySDK
