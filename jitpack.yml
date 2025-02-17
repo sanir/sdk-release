@@ -1,2 +1,6 @@
 jdk:
   - openjdk17
+build:
+  artifacts:
+    - path: releases/sdk-release.aar
+      name: MySDK
