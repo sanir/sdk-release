@@ -1,6 +1,9 @@
 jdk:
   - openjdk17
 build:
+  before_install:
+    - mkdir -p build/outputs/aar
+    - cp releases/sdk-release.aar build/outputs/aar/MySDK.aar
   artifacts:
-    - path: releases/sdk-release.aar
+    - path: build/outputs/aar/MySDK.aar
       name: MySDK
